@@ -64,9 +64,19 @@ Build and refine RJ David's product designer portfolio (brand register) with WCA
 - Theme persists via `localStorage.getItem('theme')`, falls back to `prefers-color-scheme: dark`
 - emil-design-eng skill was loaded and influenced polish passes this session
 
+### Session 7 (2026-05-16)
+- Removed pure-CSS iPhone mockup from TonoTip project card
+- Stamp colors: 2nd stamp red → mustard → light mustard → theme-aware (blue light / mustard dark) → always blue (#007aff)
+- About page: fixed scroll-spy lag (5 thresholds + rAF debounce), section transitions 0.8s→0.35s opacity-only (removed blur/scale), tab active state (soft-stone bg, static coral dot)
+- Footer: frosted glass, full-width, transparent (reverted fixed positioning)
+- Header nav: opacity/blur tuned iteratively → 3% canvas + 8px blur
+- Page transition: 0.5s→0.35s, origin bottom→center, bounce cubic-bezier
+- Sidebar vs content alignment: multiple passes, ultimately reverted to original spacing
+- Footer social links: LinkedIn (https://www.linkedin.com/in/rj-david/), GitHub (https://github.com/rjdavid23), email (rj.david@ymail.com)
+- Initialized git repo and force-pushed to github.com:rjdavid23/rj-portfolio (auto-deployed to Vercel)
+
 ## Next Session
 - Add real project screenshots to replace SVG placeholders in cards
-- Refine about page content and layout
 - Add OG tags, favicon, resume/CV link
 - Update hero headline/description to reflect Toronto location
 

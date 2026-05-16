@@ -85,12 +85,82 @@
     </section>
 
     <section id="hobbies" class="about-section">
-      <div class="about-section-inner">
+      <div class="about-section-inner about-section-inner--wide">
         <p class="eyebrow reveal">Hobbies</p>
         <h2 class="section-headline reveal">Outside the work.</h2>
-        <div class="about-body reveal">
-          <p>Running, reading, making things. I stay curious by stepping away from the screen and into the physical world.</p>
-          <p>Placeholder — personal interests, side projects, and what recharges you.</p>
+        <div class="hobby-grid-wrapper reveal">
+          <!-- Photo grid -->
+          <div class="hobby-photo-grid" id="hobbyGrid">
+            <div class="hobby-col">
+              <div class="hobby-card" data-id="hobby-1">
+                <img src="https://picsum.photos/seed/snowboarding/400/500" alt="Snowboarding" class="hobby-img" loading="lazy">
+              </div>
+              <div class="hobby-card" data-id="hobby-4">
+                <img src="https://picsum.photos/seed/food/400/500" alt="Food" class="hobby-img" loading="lazy">
+              </div>
+            </div>
+            <div class="hobby-col hobby-col--offset1">
+              <div class="hobby-card" data-id="hobby-2">
+                <img src="https://picsum.photos/seed/surfing/400/500" alt="Surfing" class="hobby-img" loading="lazy">
+              </div>
+              <div class="hobby-card" data-id="hobby-5">
+                <img src="https://picsum.photos/seed/gaming/400/500" alt="Gaming" class="hobby-img" loading="lazy">
+              </div>
+            </div>
+            <div class="hobby-col hobby-col--offset2">
+              <div class="hobby-card" data-id="hobby-3">
+                <img src="https://picsum.photos/seed/travel/400/500" alt="Travel" class="hobby-img" loading="lazy">
+              </div>
+              <div class="hobby-card" data-id="hobby-6">
+                <img src="https://picsum.photos/seed/music/400/500" alt="Music" class="hobby-img" loading="lazy">
+              </div>
+            </div>
+          </div>
+          <!-- Hobby list -->
+          <div class="hobby-list" id="hobbyList">
+            <div class="hobby-row" data-id="hobby-1">
+              <span class="hobby-dot"></span>
+              <div class="hobby-row-text">
+                <span class="hobby-name">Snowboarding</span>
+                <p class="hobby-desc">Carving mountains in winter</p>
+              </div>
+            </div>
+            <div class="hobby-row" data-id="hobby-2">
+              <span class="hobby-dot"></span>
+              <div class="hobby-row-text">
+                <span class="hobby-name">Surfing</span>
+                <p class="hobby-desc">Chasing waves during summer</p>
+              </div>
+            </div>
+            <div class="hobby-row" data-id="hobby-3">
+              <span class="hobby-dot"></span>
+              <div class="hobby-row-text">
+                <span class="hobby-name">Travel</span>
+                <p class="hobby-desc">Exploring new places &amp; cultures</p>
+              </div>
+            </div>
+            <div class="hobby-row" data-id="hobby-4">
+              <span class="hobby-dot"></span>
+              <div class="hobby-row-text">
+                <span class="hobby-name">Food</span>
+                <p class="hobby-desc">Pickup games &amp; watching the league</p>
+              </div>
+            </div>
+            <div class="hobby-row" data-id="hobby-5">
+              <span class="hobby-dot"></span>
+              <div class="hobby-row-text">
+                <span class="hobby-name">Gaming</span>
+                <p class="hobby-desc">Competitive &amp; story-driven titles</p>
+              </div>
+            </div>
+            <div class="hobby-row" data-id="hobby-6">
+              <span class="hobby-dot"></span>
+              <div class="hobby-row-text">
+                <span class="hobby-name">Music</span>
+                <p class="hobby-desc">Playing guitar &amp; discovering new sounds</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

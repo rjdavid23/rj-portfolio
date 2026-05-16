@@ -101,4 +101,35 @@
       });
     }
   }
+
+  // Hobby grid cross-highlighting
+  var hobbyGrid = document.getElementById('hobbyGrid');
+  var hobbyList = document.getElementById('hobbyList');
+  if (hobbyGrid && hobbyList) {
+    var cards = [].slice.call(hobbyGrid.querySelectorAll('.hobby-card'));
+    var rows = [].slice.call(hobbyList.querySelectorAll('.hobby-row'));
+    var allItems = cards.concat(rows);
+
+    function setHover(id) {
+      cards.forEach(function(c) {
+        var cid = c.getAttribute('data-id');
+        c.classList.toggle('is-hovered', cid === id);
+        c.classList.toggle('is-dimmed', id !== null && cid !== id);
+      });
+      rows.forEach(function(r) {
+        var rid = r.getAttribute('data-id');
+        r.classList.toggle('is-hovered', rid === id);
+        r.classList.toggle('is-dimmed', id !== null && rid !== id);
+      });
+    }
+
+    allItems.forEach(function(item) {
+      item.addEventListener('mouseenter', function() {
+        setHover(item.getAttribute('data-id'));
+      });
+      item.addEventListener('mouseleave', function() {
+        setHover(null);
+      });
+    });
+  }
 })();
