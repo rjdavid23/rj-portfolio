@@ -394,6 +394,34 @@ footer { padding: 48px 80px; display: flex; align-items: center; justify-content
   width: 100%;
   margin: 0 auto;
 }
+.about-intro-layout {
+  max-width: 960px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 280px);
+  gap: 48px;
+  align-items: center;
+}
+.about-intro-copy {
+  min-width: 0;
+}
+.about-portrait {
+  width: min(280px, 100%);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--coral) 0%, color-mix(in srgb, var(--coral) 62%, var(--primary)) 100%);
+  box-shadow: 0 32px 80px rgba(199,58,29,0.22);
+  overflow: hidden;
+  justify-self: end;
+  transform: translateY(-84px);
+}
+.about-portrait-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+  transform: scale(1.18) translate(-3%, -4px);
+}
 .section-headline {
   font-family: var(--font-display);
   font-size: clamp(40px, 6vw, 64px);
@@ -743,6 +771,7 @@ footer { padding: 48px 80px; display: flex; align-items: center; justify-content
 
 @media (max-width: 1024px) {
   .hero-headline { font-size: clamp(48px, 6vw, 72px); }
+  .about-intro-layout { grid-template-columns: minmax(0, 1fr) minmax(200px, 240px); gap: 32px; }
   .impact-grid, .impact-grid.three-col { grid-template-columns: repeat(2, 1fr); }
 }
 
@@ -755,9 +784,12 @@ footer { padding: 48px 80px; display: flex; align-items: center; justify-content
   .hero-copy { padding-bottom: 40px; }
   .hero-headline { font-size: clamp(40px, 12vw, 56px); letter-spacing: -1.2px; }
   .hero-sub { max-width: 100%; }
+  .hero-supporting { max-width: 100%; }
   .section { padding: 80px 24px; }
   .section-label { margin-bottom: 32px; }
   .about-page { padding: 120px 24px 80px; }
+  .about-intro-layout { grid-template-columns: 1fr; gap: 32px; }
+  .about-portrait { width: min(240px, 68vw); justify-self: start; order: -1; }
   .about-body p { font-size: 17px; }
   .contact-page { padding: 120px 24px 56px; }
   .contact-hero { grid-template-columns: 1fr; gap: 32px; }
@@ -795,6 +827,7 @@ footer { padding: 48px 80px; display: flex; align-items: center; justify-content
   .hero-sub { font-size: 15px; }
   .section { padding: 60px 16px; }
   .about-page { padding: 100px 16px 60px; }
+  .about-portrait { width: min(220px, 68vw); }
   .about-body p { font-size: 16px; }
   .contact-page { padding: 104px 16px 40px; }
   .contact-title { font-size: clamp(36px, 13vw, 46px); }
