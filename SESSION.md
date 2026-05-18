@@ -1,17 +1,19 @@
-# Session: About Page Work + Fixes
+# Session: Contact Page + Expertise Tab + Nav Unification
 
 ## Done
-- Hobbies: TeamShowcase photo grid (staggered 3-col, grayscale→color hover, cross-highlight)
-- All sections `max-width: 960px`, headers `clamp(40px, 6vw, 64px)`
-- Tool stack: transparent borderless 280×88 cards, 3/row, icon-left with 64×64 brand bgs + white 40×40 icons
-- Tools: Figma, OpenCode (dark logo), Dovetail, Claude, Codex, Jira, Vercel, Maze
-- Logo assets: `codex.svg`, `opencode-logo-dark.svg`, `opencode-logo-light.svg`
-- Fixed: `scroll-margin-top: 100px` on `.section` + `.about-section` — header no longer covers label on nav click
-- "Curated Work" label moved into `.container`, `text-align: center`
-- Footer: LinkedIn, GitHub, email
+- Contact page: `contact.html` with Calendly embed (`30min`), home-style nav, fallback links, dark mode theme sync via JS
+- Added `Contact` to home nav
+- Expertise tab: replaced placeholder with skill pills (7 areas, SVG icons), portfolio-style experience cards (Bridge Social, Deliverect), hospitality foundation card with TonoTip folded in
+- Hospitality block moved above tech cards; Bridge before Deliverect (chronological)
+- SaaS pill removed, pill spacing tightened
+- About page nav: switched from back-link to home-style (avatar + Work/About/Contact links)
+- Page transitions iterated (slide-left, zoom+slide, content scroll-out, curtain via transitionend) then removed — basic nav only
+- Code review fixes noted (mobile tool icon CSS, mismatched Food desc, missing `rel="noopener"`)
+- All project detail pages still have placeholder footer links (LinkedIn/GitHub/email) — flagged
 
 ## Files
-- `about.html` — tool cards (~L80), hobby grid (~L140)
-- `index.html` — work section label fix
-- `styles.css` — scroll offset, centering
-- `codex.svg`, `opencode-logo-dark.svg`, `opencode-logo-light.svg`
+- `contact.html` — new page, Calendly embed, fallback CTA, footer with real links
+- `about.html` — expertise pills (~L73), hospitality card (~L82), experience cards (~L96), home-style nav
+- `index.html` — added Contact nav link
+- `styles.css` — contact layout, expertise pills, experience cards, hospitality card, nav update, responsive
+- `main.js` — Calendly theme sync, initial page-transition removal

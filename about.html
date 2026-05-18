@@ -13,14 +13,18 @@
   <div class="page-transition" id="pageTransition"></div>
 
   <nav>
-    <a href="index.html" class="nav-back">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5m7-7l-7 7 7 7"/></svg>
-      Back
-    </a>
-    <button class="theme-toggle" aria-label="Toggle theme">
-      <svg class="tt-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="5.64" y1="5.64" x2="4.22" y2="4.22"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/><line x1="5.64" y1="18.36" x2="4.22" y2="19.78"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/></svg>
-      <svg class="tt-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-    </button>
+    <a href="index.html" class="nav-avatar" aria-label="Home"><img src="Headshot2.png" alt="RJ David" class="avatar-img"></a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="index.html#work">Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" aria-label="Toggle theme">
+        <svg class="tt-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="5.64" y1="5.64" x2="4.22" y2="4.22"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/><line x1="5.64" y1="18.36" x2="4.22" y2="19.78"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/></svg>
+        <svg class="tt-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
   </nav>
 
   <aside class="sidebar" id="sidebar">
@@ -68,8 +72,48 @@
         <p class="eyebrow reveal">Expertise</p>
         <h2 class="section-headline reveal">Crafting end-to-end product experiences.</h2>
         <div class="about-body reveal">
-          <p>Product design, UX strategy, and systems thinking across web and mobile. Experience spanning B2B SaaS, internal tools, and consumer products — turning complex workflows into simple, human interfaces.</p>
-          <p>Placeholder — add details about design process, methodologies, and areas of depth.</p>
+          <p>I design at the intersection of product, operations, and service. My work spans B2B SaaS, AI-assisted workflows, internal tools, and hospitality systems shaped by years of front-line experience.</p>
+        </div>
+        <div class="expertise-pills reveal" aria-label="Expertise areas">
+          <span class="expertise-pill"><svg class="expertise-pill-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M8 9h8M8 13h5"/></svg>Product Design</span>
+          <span class="expertise-pill"><svg class="expertise-pill-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="3"/><path d="M9 7h6M9 17h6"/></svg>UI/UX Design</span>
+          <span class="expertise-pill"><svg class="expertise-pill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.7 5.2L19 10l-5.3 1.8L12 17l-1.7-5.2L5 10l5.3-1.8L12 3z"/><path d="M18 16l.7 2.1L21 19l-2.3.9L18 22l-.7-2.1L15 19l2.3-.9L18 16z"/></svg>AI Design</span>
+          <span class="expertise-pill"><svg class="expertise-pill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h10v6H7z"/><path d="M12 10v4M8 20h8M12 14l-4 6M12 14l4 6"/></svg>Prototyping</span>
+          <span class="expertise-pill"><svg class="expertise-pill-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>Strategic Thinking</span>
+          <span class="expertise-pill"><svg class="expertise-pill-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="5"/><path d="M14 14l5 5M8 10h4"/></svg>User Research</span>
+        </div>
+        <aside class="hospitality-card reveal">
+          <div class="experience-topline">
+            <div>
+              <p class="experience-kicker">Hospitality Foundation</p>
+              <h3>Front of House, TONO</h3>
+            </div>
+            <span class="experience-date">Dec 2025-Present</span>
+          </div>
+          <p>Before and alongside product design, I spent 10 years across hospitality teams as a barista, FOH supervisor, server, runner, busser, and host in the US, Canada, and Australia, including Westin, W Hotels, Marriott, and Harbour Rocks Hotel. That background shapes how I design for messy operations, handoffs, pressure, and people using tools while real work is happening.</p>
+          <p><strong>TonoTip began inside that context.</strong> I designed and built the tip distribution tool as a side project while working front-of-house at TONO. It was later adopted by the team, replacing manual calculations with a shared workflow used in real service conditions.</p>
+        </aside>
+        <div class="experience-stack reveal">
+          <article class="experience-card">
+            <div class="experience-topline">
+              <div>
+                <h3>Bridge Social</h3>
+                <p class="experience-role">Product Designer</p>
+              </div>
+              <span class="experience-date">Jan 2025-Dec 2025</span>
+            </div>
+            <p>Designed AI-powered engagement interfaces and modern service tools for local governments, with a focus on older adults and community participation. Led redesigns across campaign and kiosk systems, improving accessibility, reducing journey friction, and contributing to a 25% increase in senior participation in local events.</p>
+          </article>
+          <article class="experience-card">
+            <div class="experience-topline">
+              <div>
+                <h3>Deliverect</h3>
+                <p class="experience-role">Design Intern / Product Designer</p>
+              </div>
+              <span class="experience-date">2022-2024</span>
+            </div>
+            <p>Designed B2B SaaS experiences for restaurant operators, including POS/channel integrations and a settings redesign that made complex operational configuration easier to navigate.</p>
+          </article>
         </div>
       </div>
     </section>
