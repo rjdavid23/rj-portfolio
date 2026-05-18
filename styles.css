@@ -92,6 +92,20 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 100px; d
 }
 .card-image { position: absolute; inset: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; z-index: 0; }
 .card-image svg { width: 40px; height: 40px; opacity: 0.06; color: var(--ink); }
+.mockup-stage { justify-content: flex-end; align-items: flex-end; padding: 72px 64px 42px 42%; perspective: 1100px; }
+.mockup-browser { position: relative; width: min(620px, 56vw); aspect-ratio: 1.32; border-radius: 24px; background: #101014; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 32px 80px rgba(0,0,0,0.26), inset 0 1px 0 rgba(255,255,255,0.08); overflow: hidden; transform: rotateX(4deg) rotateY(-11deg) rotateZ(1deg); transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+.project-card:hover .mockup-browser { transform: rotateX(2deg) rotateY(-7deg) rotateZ(0deg) translateY(-10px); }
+.mockup-chrome { height: 42px; display: flex; gap: 7px; align-items: center; padding: 0 18px; background: #17171d; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.mockup-chrome span { width: 9px; height: 9px; border-radius: 50%; background: rgba(255,255,255,0.28); }
+.mockup-sidebar { position: absolute; top: 68px; left: 24px; bottom: 24px; width: 104px; border-radius: 18px; background: #07080b; padding: 22px 18px; display: grid; align-content: start; gap: 14px; }
+.mockup-sidebar span { height: 11px; border-radius: 999px; background: rgba(255,255,255,0.24); }
+.mockup-settings { position: absolute; top: 78px; left: 156px; right: 28px; display: grid; gap: 14px; }
+.mockup-settings span { height: 54px; border-radius: 16px; background: #1f2028; box-shadow: inset 4px 0 0 var(--coral); }
+.mockup-floating-card { position: absolute; right: 56px; bottom: 54px; width: 230px; padding: 20px; border-radius: 22px; background: #17171d; border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 24px 60px rgba(0,0,0,0.3); transform: rotateZ(-6deg); display: grid; gap: 12px; transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+.project-card:hover .mockup-floating-card { transform: rotateZ(-3deg) translateY(-12px); }
+.mockup-floating-card span { height: 14px; border-radius: 999px; background: color-mix(in srgb, var(--coral) 24%, transparent); }
+.mockup-floating-card span:first-child { width: 46%; background: var(--coral); }
+.mockup-floating-card span:last-child { width: 68%; }
 .cs-content { position: absolute; top: 0; left: 0; right: 0; padding: 24px; z-index: 2; }
 .cs-pills { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
 .cs-pill { font-family: var(--font-ui); font-size: 10px; font-weight: 500; letter-spacing: 0.05em; padding: 3px 9px; border-radius: 20px; }
@@ -764,6 +778,10 @@ footer { padding: 48px 80px; display: flex; align-items: center; justify-content
   .project-meta { flex-wrap: wrap; gap: 24px; }
   .nav-bottom { flex-direction: column; gap: 16px; text-align: center; padding: 24px; }
   .projects-grid { gap: 20px; }
+  .project-card { aspect-ratio: 4 / 5; border-radius: 22px; }
+  .mockup-stage { align-items: flex-end; justify-content: center; padding: 180px 18px 28px; }
+  .mockup-browser { width: min(560px, 92vw); border-radius: 20px; transform: rotateX(3deg) rotateY(-5deg) rotateZ(1deg); }
+  .mockup-floating-card { right: 24px; bottom: 34px; width: 190px; }
   .cs-content { padding: 16px 20px 24px; }
   .cs-title { font-size: 16px; }
 }
@@ -790,6 +808,13 @@ footer { padding: 48px 80px; display: flex; align-items: center; justify-content
   .nav-bottom { padding: 16px; }
   .nav-bottom a { font-size: 13px; }
   .projects-grid { gap: 16px; }
+  .project-card { aspect-ratio: 3 / 4; }
+  .mockup-stage { padding: 170px 12px 24px; }
+  .mockup-browser { width: 108vw; min-width: 360px; }
+  .mockup-sidebar { width: 78px; left: 18px; }
+  .mockup-settings { left: 112px; right: 18px; }
+  .mockup-settings span { height: 44px; }
+  .mockup-floating-card { width: 160px; right: 16px; }
   footer { padding: 24px 16px; }
   .cs-content { padding: 12px 16px 24px; }
   .cs-title { font-size: 15px; }
