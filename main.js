@@ -3,18 +3,18 @@
   var saved = localStorage.getItem('theme');
   if (saved) {
     html.setAttribute('data-theme', saved);
-  } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    html.setAttribute('data-theme', 'dark');
+  } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+    html.setAttribute('data-theme', 'light');
   }
 
   function updateCalendlyTheme() {
     var widget = document.querySelector('.calendly-inline-widget[data-calendly-url]');
     if (!widget) return;
 
-    var isDark = html.getAttribute('data-theme') === 'dark';
-    var colors = isDark
-      ? { background: '0d0d0f', text: 'e8e8ed', primary: 'ff5a3a' }
-      : { background: 'f8f7f4', text: '212121', primary: 'c73a1d' };
+    var isLight = html.getAttribute('data-theme') === 'light';
+    var colors = isLight
+      ? { background: 'f8f7f4', text: '212121', primary: 'c73a1d' }
+      : { background: '0d0d0f', text: 'e8e8ed', primary: 'ff5a3a' };
     var url = widget.getAttribute('data-calendly-url') + '?background_color=' + colors.background + '&text_color=' + colors.text + '&primary_color=' + colors.primary;
     widget.setAttribute('data-url', url);
 
@@ -27,9 +27,14 @@
   var toggle = document.querySelector('.theme-toggle');
   if (toggle) {
     toggle.addEventListener('click', function() {
-      var isDark = html.getAttribute('data-theme') === 'dark';
-      html.setAttribute('data-theme', isDark ? 'light' : 'dark');
-      localStorage.setItem('theme', isDark ? 'light' : 'dark');
+      var isLight = html.getAttribute('data-theme') === 'light';
+      if (isLight) {
+        html.removeAttribute('data-theme');
+        localStorage.removeItem('theme');
+      } else {
+        html.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+      }
       updateCalendlyTheme();
     });
   }
