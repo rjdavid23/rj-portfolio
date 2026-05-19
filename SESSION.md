@@ -1,5 +1,12 @@
 # Session: Contact Page + Expertise Tab + Nav Unification
 
+## Latest Compact Update
+- Homepage: added hero support line, waving-hand microanimation, and unified dark Deliverect-style mockups across all project cards.
+- Contact: removed Calendly panel gradient while keeping the embed container.
+- WiredIn: reframed from generic event app to UX systems/workflow-fragmentation case study; updated hero, problem, research, systems, IA, role, impact, testing takeaways, and homepage card copy.
+- About: refined RJ intro headline/supporting copy, added smaller gradient circle portrait in the first About section, restored blurred nav avatar, and adjusted layout/positioning for alignment.
+- Commits pushed: `4102c21`, `4e9fffa`, `e8fc6c2`.
+
 ## Done
 - Contact page: `contact.html` with Calendly embed (`30min`), home-style nav, fallback links, dark mode theme sync via JS
 - Added `Contact` to home nav
