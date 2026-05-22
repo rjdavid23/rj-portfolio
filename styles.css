@@ -325,10 +325,6 @@ footer { padding: 48px 80px; display: flex; align-items: center; justify-content
 /* ═══ HAMBURGER ═══ */
 .hamburger {
   display: none;
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 110;
   width: 36px;
   height: 36px;
   background: none;
@@ -339,6 +335,7 @@ footer { padding: 48px 80px; display: flex; align-items: center; justify-content
   align-items: center;
   gap: 5px;
   padding: 6px;
+  flex-shrink: 0;
   -webkit-tap-highlight-color: transparent;
 }
 .hamburger span {
@@ -766,20 +763,20 @@ footer { padding: 48px 80px; display: flex; align-items: center; justify-content
     width: 24px;
     height: 24px;
   }
-  .tool-icon {
-    width: 60px;
-    height: 60px;
-  }
 }
 
 @media (max-width: 1024px) {
   .hero-headline { font-size: clamp(48px, 6vw, 72px); }
   .about-intro-layout { grid-template-columns: minmax(0, 1fr) minmax(200px, 240px); gap: 32px; }
   .impact-grid, .impact-grid.three-col { grid-template-columns: repeat(2, 1fr); }
+  .project-card .cs-desc { max-height: 80px; opacity: 1; }
+  .project-card .cs-arrow { opacity: 1; transform: scale(1) translateY(0); }
+  .project-card .card-accent { opacity: 1; }
+  .project-card .card-stamp { opacity: 0.85; transform: scale(1); animation: none; }
 }
 
 @media (max-width: 768px) {
-  nav { padding: 0 24px; }
+  nav { padding: 0 24px; gap: 8px; }
   .nav-links { gap: 12px; }
   .nav-links a { font-size: 13px; }
   .announcement-bar { padding: 8px 24px; font-size: 11px; }
@@ -792,8 +789,10 @@ footer { padding: 48px 80px; display: flex; align-items: center; justify-content
   .section-label { margin-bottom: 32px; }
   .about-page { padding: 120px 24px 80px; }
   .about-intro-layout { grid-template-columns: 1fr; gap: 32px; }
-  .about-portrait { width: min(240px, 68vw); justify-self: start; order: -1; }
+  .about-portrait { width: min(240px, 68vw); justify-self: center; order: -1; transform: none; }
+  .about-intro-copy { text-align: center; }
   .about-body p { font-size: 17px; }
+  .about-headline { text-align: center; }
   .contact-page { padding: 120px 24px 56px; }
   .contact-hero { grid-template-columns: 1fr; gap: 32px; }
   .contact-title { font-size: clamp(40px, 12vw, 58px); letter-spacing: -1.2px; }
@@ -814,7 +813,7 @@ footer { padding: 48px 80px; display: flex; align-items: center; justify-content
   .nav-bottom { flex-direction: column; gap: 16px; text-align: center; padding: 24px; }
   .projects-grid { gap: 20px; }
   .project-card { aspect-ratio: 4 / 5; border-radius: 22px; }
-  .mockup-stage { align-items: flex-end; justify-content: center; padding: 180px 18px 28px; }
+  .mockup-stage { align-items: flex-end; justify-content: center; padding: 120px 18px 28px; }
   .mockup-browser { width: min(560px, 92vw); border-radius: 20px; transform: rotateX(3deg) rotateY(-5deg) rotateZ(1deg); }
   .mockup-floating-card { right: 24px; bottom: 34px; width: 190px; }
   .cs-content { padding: 16px 20px 24px; }
@@ -830,7 +829,7 @@ footer { padding: 48px 80px; display: flex; align-items: center; justify-content
   .hero-sub { font-size: 15px; }
   .section { padding: 60px 16px; }
   .about-page { padding: 100px 16px 60px; }
-  .about-portrait { width: min(220px, 68vw); }
+  .about-portrait { width: min(220px, 68vw); transform: none; }
   .about-body p { font-size: 16px; }
   .contact-page { padding: 104px 16px 40px; }
   .contact-title { font-size: clamp(36px, 13vw, 46px); }
@@ -845,8 +844,8 @@ footer { padding: 48px 80px; display: flex; align-items: center; justify-content
   .nav-bottom a { font-size: 13px; }
   .projects-grid { gap: 16px; }
   .project-card { aspect-ratio: 3 / 4; }
-  .mockup-stage { padding: 170px 12px 24px; }
-  .mockup-browser { width: 108vw; min-width: 360px; }
+  .mockup-stage { padding: 100px 12px 24px; }
+  .mockup-browser { width: 100%; min-width: 0; }
   .mockup-sidebar { width: 78px; left: 18px; }
   .mockup-settings { left: 112px; right: 18px; }
   .mockup-settings span { height: 44px; }
