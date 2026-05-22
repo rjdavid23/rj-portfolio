@@ -113,6 +113,21 @@
     }
   }
 
+  // Concierge bell hover animation
+  document.querySelectorAll('.nav-avatar').forEach(function(bell) {
+    bell.addEventListener('mouseenter', function() {
+      bell.classList.add('bell-ringing');
+      setTimeout(function() { bell.classList.remove('bell-ringing'); }, 700);
+    });
+  });
+
+  // Icon draw-loop setup
+  document.querySelectorAll('.li-draw, .gh-body, .gh-tail').forEach(function(el) {
+    var len = Math.ceil(el.getTotalLength());
+    el.style.setProperty('--len', len);
+    el.style.strokeDasharray = len;
+  });
+
   // Hobby grid cross-highlighting
   var hobbyGrid = document.getElementById('hobbyGrid');
   var hobbyList = document.getElementById('hobbyList');

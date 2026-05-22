@@ -1,11 +1,10 @@
-# Session: Contact Page + Expertise Tab + Nav Unification
+# Session: Header & Footer Polish — Glass Nav, Animated Icons, Tooltips
 
 ## Latest Compact Update
-- Homepage: added hero support line, waving-hand microanimation, and unified dark Deliverect-style mockups across all project cards.
-- Contact: removed Calendly panel gradient while keeping the embed container.
-- WiredIn: reframed from generic event app to UX systems/workflow-fragmentation case study; updated hero, problem, research, systems, IA, role, impact, testing takeaways, and homepage card copy.
-- About: refined RJ intro headline/supporting copy, added smaller gradient circle portrait in the first About section, restored blurred nav avatar, and adjusted layout/positioning for alignment.
-- Commits pushed: `4102c21`, `4e9fffa`, `e8fc6c2`.
+- Header: swapped full-width nav blur for individual glass pills on nav links (Work, About, Contact); avatar now a concierge bell icon with coral gradient + blur + hover ring animation.
+- Footer: replaced LinkedIn, GitHub, and Email SVGs with animated versions — LinkedIn draws in on hover, GitHub draws + tail wags, email is a mailbox with a spring-down flag.
+- Footer: added tooltips (aria-label) on each icon hover.
+- Commits pushed: `68992e2`.
 
 ## Done
 - Contact page: `contact.html` with Calendly embed (`30min`), home-style nav, fallback links, dark mode theme sync via JS
