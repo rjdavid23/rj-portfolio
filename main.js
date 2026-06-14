@@ -1,11 +1,25 @@
 (function() {
   var html = document.documentElement;
-  var saved = localStorage.getItem('theme');
-  if (saved) {
-    html.setAttribute('data-theme', saved);
-  } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-    html.setAttribute('data-theme', 'light');
+
+  function getStoredTheme() {
+    try {
+      return localStorage.getItem('theme');
+    } catch (e) {
+      return null;
+    }
   }
+
+  function setStoredTheme(theme) {
+    try {
+      localStorage.setItem('theme', theme);
+    } catch (e) {}
+  }
+
+  function setTheme(theme) {
+    html.setAttribute('data-theme', theme);
+  }
+
+  setTheme(getStoredTheme() || 'dark');
 
   function updateCalendlyTheme() {
     var widget = document.querySelector('.calendly-inline-widget[data-calendly-url]');
@@ -28,13 +42,9 @@
   if (toggle) {
     toggle.addEventListener('click', function() {
       var isLight = html.getAttribute('data-theme') === 'light';
-      if (isLight) {
-        html.removeAttribute('data-theme');
-        localStorage.removeItem('theme');
-      } else {
-        html.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-      }
+      var nextTheme = isLight ? 'dark' : 'light';
+      setTheme(nextTheme);
+      setStoredTheme(nextTheme);
       updateCalendlyTheme();
     });
   }
