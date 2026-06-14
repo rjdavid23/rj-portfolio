@@ -128,6 +128,161 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 100px; d
 .cs-arrow svg { width: 14px; height: 14px; stroke: var(--ink); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .project-card:hover .cs-arrow { opacity: 1; transform: scale(1) translateY(0); }
 
+/* ═══ iPhone 16 Pro MOCKUP FRAME ═══ */
+.phone-mockup {
+  position: relative;
+  width: 220px;
+  aspect-ratio: 9 / 19.5;
+  border-radius: 48px;
+  background: linear-gradient(
+    180deg,
+    #d4cfc9 0%,
+    #c4bfb9 25%,
+    #b8b3ad 50%,
+    #aca7a2 75%,
+    #a09b96 100%
+  );
+  box-shadow:
+    0 32px 80px rgba(0,0,0,0.35),
+    inset 0 1px 0 rgba(255,255,255,0.35),
+    inset 0 -1px 0 rgba(0,0,0,0.12);
+  overflow: hidden;
+  flex-shrink: 0;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.phone-mockup::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 48px;
+  padding: 1.5px;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.3) 0%,
+    rgba(255,255,255,0.06) 40%,
+    rgba(0,0,0,0.03) 60%,
+    rgba(0,0,0,0.12) 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 3;
+}
+.phone-mockup::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 7px;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 3.5px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0,0,0,0.07) 20%,
+    rgba(0,0,0,0.07) 80%,
+    transparent 100%
+  );
+  border-radius: 2px;
+  z-index: 3;
+}
+/* ═══ VIDEO MOCKUPS ═══ */
+.deliverect-card-video {
+  width: min(520px, 50vw);
+  border-radius: 14px;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.3);
+  display: block;
+  transform: rotateX(4deg) rotateY(-11deg) rotateZ(1deg);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.project-card:hover .deliverect-card-video {
+  transform: rotateX(2deg) rotateY(-7deg) rotateZ(0deg) translateY(-10px);
+}
+.mockup-deliverect-video {
+  justify-content: center;
+  align-items: center;
+  padding: 72px 24px 42px 42%;
+}
+.deliverect-video-list {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+.deliverect-video-list > div {
+  flex: 1;
+  min-width: 0;
+}
+.deliverect-video-list video {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  background: transparent;
+}
+@media (max-width: 768px) {
+  .deliverect-video-list {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+video { background: transparent; }
+
+@media (max-width: 768px) {
+  .deliverect-card-video { width: min(560px, 92vw); border-radius: 12px; transform: rotateX(3deg) rotateY(-5deg) rotateZ(1deg); }
+  .project-card:hover .deliverect-card-video { transform: translateY(-6px); }
+}
+.phone-mockup-screen {
+  position: absolute;
+  inset: 1.5px;
+  border-radius: 46.5px;
+  overflow: hidden;
+  background: #000;
+}
+.phone-mockup-screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.phone-mockup--tilt {
+  transform: rotateX(4deg) rotateY(-11deg) rotateZ(1deg);
+}
+.project-card:hover .phone-mockup--tilt {
+  transform: rotateX(2deg) rotateY(-7deg) rotateZ(0deg) translateY(-10px);
+}
+.mockup-tono {
+  justify-content: center;
+  align-items: center;
+  padding: 72px 24px 42px 42%;
+}
+.phone-mockup--spread {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.phone-mockup--spread .phone-mockup {
+  width: 200px;
+}
+@media (max-width: 768px) {
+  .phone-mockup { width: 180px; border-radius: 39px; }
+  .phone-mockup::before { border-radius: 39px; }
+  .phone-mockup-screen { border-radius: 37.5px; }
+  .phone-mockup--tilt { transform: rotateX(2deg) rotateY(-4deg) rotateZ(0.5deg); }
+  .project-card:hover .phone-mockup--tilt { transform: translateY(-6px); }
+  .mockup-tono { padding: 120px 18px 28px; }
+}
+@media (max-width: 480px) {
+  .phone-mockup { width: 150px; border-radius: 33px; }
+  .phone-mockup::before { border-radius: 33px; }
+  .phone-mockup-screen { border-radius: 31.5px; }
+  .phone-mockup--spread .phone-mockup { width: 150px; }
+}
+
 /* ═══ DINER HOVER EFFECTS ═══ */
 .card-stamp {
   font-size: 13px; font-weight: 700; letter-spacing: 2px;
