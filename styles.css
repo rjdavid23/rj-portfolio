@@ -1033,6 +1033,49 @@ a:hover .gh-tail { animation: draw-hover 0.6s ease forwards, wag 2.5s ease-in-ou
   .cs-title { font-size: 15px; }
 }
 
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.overview-card {
+  border: 1px solid var(--hairline);
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--canvas) 70%, transparent);
+  padding: 24px;
+}
+.overview-card h3 {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+.overview-card p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--body-muted);
+}
+@media (max-width: 768px) {
+  .overview-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .overview-card {
+    padding: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .overview-card {
+    padding: 18px;
+  }
+  .overview-card p {
+    font-size: 13px;
+  }
+}
+
 /* ═══ SIDEBAR RESPONSIVE ═══ */
 @media (max-width: 768px) {
   .sidebar {
