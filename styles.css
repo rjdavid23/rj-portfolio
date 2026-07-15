@@ -1120,6 +1120,45 @@ a:hover .gh-tail { animation: draw-hover 0.6s ease forwards, wag 2.5s ease-in-ou
   }
 }
 
+.placeholder-lg {
+  width: 100%;
+  min-height: 400px;
+  border: 1px solid var(--hairline);
+  border-radius: 18px;
+  background: var(--soft-stone);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.placeholder-sm {
+  width: 100%;
+  min-height: 260px;
+  border: 1px solid var(--hairline);
+  border-radius: 18px;
+  background: var(--soft-stone);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+@media (max-width: 768px) {
+  .placeholder-lg {
+    min-height: 280px;
+  }
+  .placeholder-sm {
+    min-height: 200px;
+  }
+}
+
 /* ═══ SIDEBAR RESPONSIVE ═══ */
 @media (max-width: 768px) {
   .sidebar {
