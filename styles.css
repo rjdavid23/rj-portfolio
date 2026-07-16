@@ -496,6 +496,62 @@ a:hover .gh-tail { animation: draw-hover 0.6s ease forwards, wag 2.5s ease-in-ou
   opacity: 1;
 }
 
+/* ═══ LARGE STAT ROW ═══ */
+.stat-row-lg {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.stat-lg {
+  border: 1px solid var(--hairline);
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--canvas) 70%, transparent);
+  padding: 36px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.stat-lg-value {
+  font-family: var(--font-display);
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--ink);
+}
+.stat-lg-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  line-height: 1.3;
+}
+@media (max-width: 768px) {
+  .stat-row-lg { grid-template-columns: 1fr; gap: 8px; }
+  .stat-lg { padding: 24px 16px; }
+  .stat-lg-value { font-size: 30px; }
+}
+
+/* ═══ LARGER PHONE MOCKUPS FOR FEATURE CARDS ═══ */
+.feature-mockups .phone-mockup--lg {
+  width: 260px;
+}
+@media (max-width: 1024px) {
+  .feature-mockups .phone-mockup--lg { width: 200px; }
+}
+@media (max-width: 768px) {
+  .feature-mockups .phone-mockup--lg { width: 180px; }
+}
+@media (max-width: 480px) {
+  .feature-mockups .phone-mockup--lg { width: 150px; }
+}
+
+/* ═══ LARGER DESIGN VISUALS ═══ */
+.design-visual--lg {
+  aspect-ratio: 16/10 !important;
+}
+
 /* ═══ HAMBURGER ═══ */
 .hamburger {
   display: none;
